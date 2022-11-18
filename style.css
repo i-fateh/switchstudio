@@ -1,0 +1,868 @@
+body{
+    background: rgb(255, 255, 255);
+    width: 100vw; height: auto;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    margin: 10px;
+}
+
+.smallAvatar {
+    width: 45px; height: 45px; border-radius: 50%; margin-right: 10px;
+}
+
+#socials {
+    width: 100vw; height: 60px;
+    position: relative;
+    margin-top: 30px;
+    display: flex; align-items: center; justify-content: center;
+}
+.social {
+    transition: .4s;
+    width: 50px; height: 50px; border-radius: 50%; margin: 3px;
+}
+.social:hover {
+    transition: .4s;
+    opacity: .7;
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 3.5em; width: 80%; height: auto;
+    text-align: center;
+    line-height: 0px; margin-top: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    font-size: 1.2em; text-align: center; display: flex; align-items: center; justify-content: center;
+    width: 80%; margin-bottom: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#box {
+    display: flex; align-items: center; justify-content: center;
+    width: 95%; height: auto;
+}
+
+#boxColorBtn{
+    width: auto; height: 85px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; margin-top: 80px; background: black; border-radius: 10px; padding: 0px 5x;
+}
+
+.logo {
+    transform: scale(.6);
+    transition: .3s; margin: 0 -20px;
+}
+.logo:hover {
+    transition: .3s; transform: translateY(-5px) scale(.6);
+}
+
+#colorRedBlue, #colorRedBlack, #colorYellowGreen, #colorPinkPurple {
+    margin: 18px;
+}
+
+.circleColor {
+    min-width: 40px; min-height: 40px;
+    border-radius: 20%; overflow: hidden; margin: 5px 5px; 
+    transform: rotate(90deg); margin-left: 30px;
+}
+.circleColor:hover {
+    transition: .3s; transform: translateY(-5px) rotate(90deg);
+}
+
+#colorRed, #colorBlue, #colorGreen, #colorYellow, #colorPink, #colorPurple {
+    width: 40px;
+    height: 20px;
+}
+
+#colorRed {
+    background: #d63031;
+}
+#colorBlue {
+    background: #0984e3;
+}
+
+#colorGreen {
+    background: #2ed573;
+}
+#colorYellow {
+    background: #fed330;
+}
+
+#colorPink {
+    background: #f78fb3;
+}
+#colorPurple {
+    background: #574b90;
+}
+
+#screenFrame {
+    min-width: 750px;
+    height: 446px;
+    background: black;
+    position: relative;
+    margin-top: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0px 24px 36px -38px rgba(0,0,0,1);
+}
+
+#borderInterFrame {
+    width: 735px;
+    height: 418px;
+    background-color: black;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+#internFrame {
+    width: 731.5px;
+    height: 414.5px;
+    background: black;
+    border: .5px solid;
+    border-left-color: rgba(30, 30, 30, 0.426);
+    border-bottom-color: rgba(144, 144, 144, 0.356);
+    border-top-color: rgba(30, 30, 30, 0.211);
+    border-right-color: rgba(56, 56, 56, 0.743);
+    border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+#image{
+    width: 690px;
+    height: 388px;
+    background-color: rgb(24, 33, 33);
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+
+}
+
+#reflect-screen{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-right : 150px solid transparent;
+    border-bottom : 150px solid rgba(255, 255, 255, 0.18);
+    position: absolute;
+    left: 101px; top: 120px;
+    transform: rotate(90deg) scale(2.5);
+   }
+
+   #reflectTopScreen {
+    width: 100%;
+    height: 3.5px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(98, 98, 98) 100%);
+    position: absolute;
+    top: 1px;
+   }
+
+   #reflectBottomScreen {
+    width: 100%;
+    height:3px;
+    background: rgb(205, 205, 205);
+    background: linear-gradient(180deg, rgba(98, 98, 98) 100%, rgb(205, 205, 205) 80%);    
+    position: absolute;
+    bottom: 2px;
+   }
+
+   #lineBottomLeft, #lineBottomRight {
+    width: 70px; height: 4px; background: black; border-radius: 3px;
+    position: absolute;
+    bottom: 0px; left: 40px;
+   }
+   
+   #lineBottomRight {
+    left: 640px;
+   }
+
+   #buttonVol1, #buttonVol2 {
+    width: 50px; height: 6px; border-top-left-radius: 10px; border-top-right-radius: 10px;
+    position: absolute;top: -5px;left: 105px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,212,212,1) 39%, rgba(24,24,24,1) 81%);
+   }
+
+   #buttonVol2 {
+    left: 158px;
+   }
+
+/* JOYCON */
+#joyLeft, #joyRight {
+    min-width: 150px;
+    height: 450px;
+    background-color: rgb(241,241,241);
+    background-color: linear-gradient(35deg, rgba(241,241,241) 81%, rgba(255,255,255,1) 100%);
+    position: relative;
+    left: 11px; top: 0px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-right: 0px;
+    border: solid .5px rgba(218, 218, 218, 0.201);
+    box-shadow: 0px 24px 36px -38px rgba(0,0,0,1);
+}
+
+/* REFLECTS JOYCON LEFT */
+
+#joyLeftReflectTop {
+    width: 150px; 
+    height: 125px; 
+    background: transparent;
+    border: solid 15px rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+    border-radius: 70%/100px 130px 0 0px;
+    transform: rotate(-42deg); 
+    position: absolute;
+    left: -2px;
+    top: 5px;
+    opacity: .15;
+}
+
+#joyLeftReflectTopBis {
+    width: 48px; height: 15px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 100px;
+    top: 2px;
+    opacity: .15;
+}
+
+#joyLeftReflectLeft {
+    width: 15px; height: 269px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 2px;
+    top: 87px;
+    opacity: .1;
+}
+
+#joyLeftReflectBottom {
+    width: 150px; 
+    height: 125px; 
+    background: transparent;
+    border: solid 15px rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+    border-radius: 70%/100px 130px 0 0px;
+    position: absolute;
+    left: -7px;
+    bottom: 8px;
+    opacity: .1;
+    transform: rotate(-135deg);
+}
+
+#joyLeftReflectBottomBis {
+    width: 57px; height: 14.5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 91.5px;
+    bottom: 0px;
+    opacity: .1;
+}
+
+/* END REFLECTS */
+
+
+
+
+/* REFLECTS JOYCON RIGHT */
+
+#joyRightReflectTop {
+    width: 150px; 
+    height: 125px; 
+    background: transparent;
+    border: solid 15px rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+    border-radius: 70%/100px 130px 0 0px;
+    transform: rotate(45deg); 
+    position: absolute;
+    right: -7.5px;
+    top: 8px;
+    opacity: .15;
+}
+
+#joyRightReflectTopBis {
+    width: 54.5px; height: 15px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left:4.59px;
+    top: 0px;
+    opacity: .15;
+}
+
+#joyRightReflectRight {
+    width: 15px; height: 263.5px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    right: 1.5px;
+    top: 94px;
+    opacity: .1;
+}
+
+#joyRightReflectBottom {
+    width: 150px; 
+    height: 125px; 
+    background: transparent;
+    border: solid 15px rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+    border-radius: 70%/100px 130px 0 0px;
+    position: absolute;
+    right: -3px;
+    bottom: 4px;
+    opacity: .1;
+    transform: rotate(133deg);
+}
+
+#joyRightReflectBottomBis {
+    width: 57px; height: 14.5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 0px;
+    bottom: .5px;
+    opacity: .1;
+}
+
+
+/* END REFLECT RIGHT */
+
+
+#keyTopJoyLeft  {
+    width: 150px; 
+    height: 100px;  
+    background: transparent;
+    position: absolute;
+    z-index: -1;
+    border: solid 10px rgb(255, 255, 255);
+    border-color: rgb(189, 189, 189) transparent transparent transparent;
+    border-radius: 80%/100px 100px 0 0;
+    top: 1px; left:-6px;
+    transform: rotate(-29deg); 
+}
+
+#keyTopJoyLeftBis{
+    width: 147px; 
+    height: 100px;  
+    background: transparent;
+    position: absolute;
+    z-index: -1;
+    border: solid 10px rgb(255, 255, 255);
+    border-color: rgb(36, 36, 36) transparent transparent transparent;
+    border-radius: 80%/100px 100px 0 0;
+    top: 3px; left:-3.5px;
+    transform: rotate(-29deg); 
+}
+
+
+
+#joyRight {
+    width: 150px;
+    height: 450px;
+    position: relative;
+    left: -12px; top: 0px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 5px;
+}
+
+#keyTopJoyRight  {
+    width: 150px; 
+    height: 100px;  
+    background: transparent;
+    position: absolute;
+    z-index: -1;
+    border: solid 10px rgb(189, 189, 189);
+    border-color: silver transparent transparent transparent;
+    border-radius: 80%/100px 100px 0 0;
+    top: 1px; left:-13.5px;
+    transform: rotate(31.5deg); 
+}
+
+#keyTopJoyRightBis{
+    width: 147px; 
+    height: 100px;  
+    background: transparent;
+    position: absolute;
+    z-index: -1;
+    border: solid 10px red;
+    border-color: rgb(36, 36, 36) transparent transparent transparent;
+    border-radius: 80%/100px 100px 0 0;
+    top: 3px; left:-12.5px;
+    transform: rotate(31deg); 
+}
+
+#buttonPlus1 {
+    width: 30px;
+    height: 9px;
+    position: absolute;
+    background: rgb(68, 68, 68);
+    background: linear-gradient(131deg, rgba(68, 68, 68,1) 39%, rgba(24,24,24,1) 81%);
+    top: 50px; left: 19px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,1);
+
+}
+#buttonPlus2 {
+    width: 9px;
+    height: 30px;
+    position: absolute;
+    background: rgb(68, 68, 68);
+    background: linear-gradient(131deg, rgba(68, 68, 68,1) 39%, rgba(24,24,24,1) 81%);
+    top: 39.5px; left: 30px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,1);
+    
+}
+
+
+#btnContainer2 {
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    top: 90px;
+    left: 33px;
+    transform: rotate(45deg);
+}
+
+#btnX, #btnY, #btnB, #btnA {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: rgb(91,91,91);
+    background: linear-gradient(180deg, rgba(91,91,91,1) 0%, rgba(42,42,42,1) 100%);
+    border-radius: 50%;
+    border: solid black 1px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 4px 4px 9px -5px rgba(0,0,0,1);
+    transform: rotate(-45deg);
+    color: rgb(215, 215, 215); 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#btnX {
+    top: 0px; 
+}
+#reflectBtnX, #reflectBtnY, #reflectBtnB, #reflectBtnA{
+    width: 24px; 
+    height: 32px; 
+    background: transparent;
+    border: solid 2px rgb(255, 255, 255);
+    border-color: rgb(251, 251, 251) transparent transparent transparent;
+    border-radius: 390%/100px 90px 0 0;
+    transform: rotate(-1deg); 
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    opacity: .4
+}
+
+#btnY {
+    right: 0px;
+}
+#btnB {
+    bottom: 0px
+}
+#btnA {
+    bottom: 0px;
+    right: 0px;
+}
+
+
+
+#stickRightBorder {
+    width: 73px;
+    height: 73px;
+    background: rgb(88,88,88);
+    background: radial-gradient(circle, rgba(88,88,88,1) 0%, rgba(43,43,43,1) 100%);
+    position: absolute;
+    top: 220px;
+    left: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0px 8px 12px -8px rgba(0,0,0,1);
+}
+
+#stickRight {
+    width: 70px;
+    height: 70px;
+    background: rgb(179,179,179);
+    background: linear-gradient(180deg, rgba(179,179,179,1) 0%, rgba(0,0,0,0.9164040616246498) 100%);
+    position: absolute;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0px 15px 36px -13px rgba(0,0,0,1);
+
+}
+
+#quartRight{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: yellow;
+    border: solid 2px;
+    border-radius: 50%;
+    border-left-color: rgba(44, 44, 44, 0.39);
+    border-right-color: rgba(183, 183, 183, 0.369);
+    border-top-color: rgba(44, 44, 44, 0.39);
+    border-bottom-color: rgb(183, 183, 183, 0.369);
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.5);
+    background: rgb(87,87,87);
+    background: radial-gradient(circle, rgba(87,87,87,1) 0%, rgba(42,42,42,1) 100%);
+}
+
+#lineStickTopR, #lineStickBottomR {
+    width: 2px;
+    height: 7px;
+    position: absolute;
+    top:2px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: rgb(50, 50, 50);
+}
+
+#lineStickLeftR, #lineStickRightR {
+    width: 7px;
+    height: 2px;
+    position: absolute;
+    left:2px;
+    background: rgb(47, 47, 47);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#lineStickBottomR {
+    top:60px;
+}
+#lineStickRightR {
+    left: 60px;
+}
+
+#homeButtonBorder {
+    width: 40px;
+    height: 40px;
+    background: rgb(139, 139, 139);
+    position: absolute;
+    bottom: 83px;
+    left: 27px;
+    border-radius: 50%;
+    display: flex; align-items: center;
+    flex-direction: column;
+    border: solid 1.5px rgb(92, 92, 92);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 4px 4px 9px -5px rgba(0,0,0,1);
+
+}
+
+#btnHouse {
+    background: rgb(73, 73, 73);
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    border: solid 2.5px rgb(64, 64, 64);
+    transform: scale(.9);
+}
+
+#houseTop {
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-right : 33px solid transparent;
+    border-bottom : 41px solid rgb(26, 26, 26);
+    border-left : 32px solid transparent;
+    transform: scale(.4);
+    position: absolute;
+    top: -10px;
+    left: -16px;
+}
+
+#houseBottom {
+    width: 20px;
+    height: 12px;
+    background: rgb(26, 26, 26);
+    position: absolute;
+    top: 15px; left: 6.2px;
+}
+
+#houseWindow {
+    width: 6px;
+    height: 7px;
+    border-radius: 1px;
+    background: rgb(73, 73, 73);
+    position: absolute;
+    top: 2px; left: 7px;
+}
+
+/* END JoyCon Right */
+
+#buttonTop {
+    width: 26px;
+    height: 8px;
+    position: absolute;
+    background: rgb(101,101,101);
+    background: linear-gradient(180deg, rgba(101,101,101,1) 0%, rgba(0,0,0,1) 100%);
+    left: 111px; top: 40px;
+    border-radius: 2px;
+    border: solid black .4px;
+    box-shadow: 0px 1px 3px -1px rgba(0,0,0,1);
+}
+
+
+#stickLeftBorder {
+    width: 73px;
+    height: 73px;
+    background: rgb(88,88,88);
+    background: radial-gradient(circle, rgba(88,88,88,1) 0%, rgba(43,43,43,1) 100%);
+    position: absolute;
+    top: 90px;
+    left: 45px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0px 8px 12px -8px rgba(0,0,0,1);
+}
+
+#stickLeft {
+    width: 70px;
+    height: 70px;
+    background: rgb(179,179,179);
+    background: linear-gradient(180deg, rgba(179,179,179,1) 0%, rgba(0,0,0,0.9164040616246498) 100%);
+    position: absolute;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0px 15px 36px -13px rgba(0,0,0,1);
+
+}
+
+#quart{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: yellow;
+    border: solid 2px;
+    border-radius: 50%;
+    border-left-color: rgba(44, 44, 44, 0.39);
+    border-right-color: rgba(183, 183, 183, 0.369);
+    border-top-color: rgba(44, 44, 44, 0.39);
+    border-bottom-color: rgb(183, 183, 183, 0.369);
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.5);
+    background: rgb(87,87,87);
+    background: radial-gradient(circle, rgba(87,87,87,1) 0%, rgba(42,42,42,1) 100%);
+}
+
+#lineStickTop, #lineStickBottom {
+    width: 2px;
+    height: 7px;
+    position: absolute;
+    top:2px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: rgb(50, 50, 50);
+}
+
+#lineStickLeft, #lineStickRight {
+    width: 7px;
+    height: 2px;
+    position: absolute;
+    left:2px;
+    background: rgb(47, 47, 47);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#lineStickBottom {
+    top:60px;
+}
+#lineStickRight {
+    left: 60px;
+}
+
+
+#btnContainer {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 220px;
+    left: 38px;
+    transform: rotate(45deg);
+}
+
+#reflectUp, #reflectLeft, #reflectRight, #reflectBottom{
+    width: 22px; 
+    height: 32px; 
+    background: transparent;
+    border: solid 2px rgb(255, 255, 255);
+    border-color: rgb(251, 251, 251) transparent transparent transparent;
+    border-radius: 390%/100px 90px 0 0;
+    transform: rotate(-45deg); 
+    position: absolute;
+    left: 3px;
+    top: -1px;
+    opacity: .4;
+}
+
+
+
+#btnUp, #btnRight, #btnDown, #btnLeft {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: rgb(91,91,91);
+    background: linear-gradient(180deg, rgba(91,91,91,1) 0%, rgba(42,42,42,1) 100%);
+    border-radius: 50%;
+    border: solid black 1px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 4px 4px 9px -5px rgba(0,0,0,1);
+}
+.triangleUp {
+    transform: rotate(-45deg) translateY(-2px);
+    color: rgb(0, 0, 0);
+}
+
+.triangleRight {
+    transform: rotate(-75deg) translateX(-1px) translateY(-1.5px);
+}
+.triangleDown {
+    transform: rotate(-16deg) translateY(-2px);
+}
+.triangleLeft {
+    transform: rotate(12.5deg) translateX(.5px) translateY(-2.5px);
+}
+
+
+#btnRight {
+   right: 0px;
+}
+#btnDown {
+    bottom: 0px;
+}
+#btnLeft {
+   right: 0;
+   bottom: 0px;
+}
+
+#buttonLeftBottom {
+    width: 27px;
+    height: 27px;
+    border-radius: 3px;
+    background: rgb(91,91,91);
+    background: linear-gradient(180deg, rgba(91,91,91,1) 0%, rgba(42,42,42,1) 100%);
+    position: absolute;
+    bottom: 95px; left: 93px;
+    display: flex; align-items: center; justify-content: center;
+    border: solid black 1px;
+    box-shadow: 0px 1px 3px -1px rgba(0,0,0,1);
+}
+.circle {
+    width: 18px; height: 18px; 
+    background: rgb(87,87,87);
+    background: radial-gradient(circle, rgba(87,87,87,1) 0%, rgba(42,42,42,1) 100%);
+    border-radius: 50%;
+    border: solid 1px;
+    border-top-color: rgb(28, 28, 28, 0.743);
+    border-left-color: rgba(60, 60, 60, 0.743);
+    border-right-color: rgba(60, 60, 60, 0.743);
+    border-bottom-color: rgba(91, 91, 91, 0.743);
+}
+
+
+
+#curvedScreenLeft {
+    width: 11px;
+    height: 7px;
+    background: rgb(255, 255, 255);
+    position: relative;
+    top: -213px; left: 13px;
+    z-index: 99;
+    border-bottom-right-radius: 30px;
+}
+
+#curvedScreenRight {
+    width: 11px;
+    height: 7px;
+    background: rgb(255, 255, 255);
+    position: relative;
+    top: -213px; right: 11.5px;
+    z-index: 99;
+    transform: rotate(180deg) rotateX(180deg);
+    border-bottom-right-radius: 30px;
+}
+
+#frameLeft, #frameRight {
+    min-width: 13px;
+    height: 440px;
+    margin-top: 10px;
+    background: black;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 50px;
+    box-shadow: 0px 2px 36px -13px rgba(0,0,0,1);
+}
+
+#frameRight {
+    margin-right: -.8px;
+    border-radius: 0px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 50px;
+ }
+
+#alert {
+    display: none;
+}
+
+#ordinateur {
+    display: none;
+}
+
+.footer {
+    font-size: .5em;
+    position: absolute; bottom: 0px;
+}
+
+
+ @media screen and (max-width: 1024px) {
+
+    body {
+        background: white !important;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {font-size: 1em;}
+
+    #boxColorBtn {
+        display: none !important;
+    }
+    #socials {
+        display: none !important;
+    }
+    #box {
+        display: none !important;
+    }
+
+    #alert {
+        font-size: 2em; width: 80%;
+        display: flex; text-align: center; justify-content: center;
+    }
+    
+    #ordinateur {
+        display: flex; width: 300px; height: auto; 
+        margin-top: 30px;
+    }
+}
