@@ -831,6 +831,7 @@ p {
 .footer {
     font-size: .5em;
     position: absolute; bottom: 0px;
+    color: rgb(146, 146, 146);
 }
 
 
