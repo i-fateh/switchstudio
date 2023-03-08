@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
-
     <link rel="stylesheet" href="style.css">
     <title>Nintendo Switch Studio CSS ART</title>
 </head>
@@ -14,14 +13,14 @@
     <h1 id="title">Nintendo Switch Studio</h1>
     <p id="presentation"><img loading="lazy" class="smallAvatar" src="./images/fateh.jpg" alt="">my name is Fateh, I'm a French Digital Project Manager and FullStack Web Developer.
         <br>
-        I developed this Nintendo Switch exclusively in HTML / CSS / JS 😊</p>
+        I developed this Nintendo Switch exclusively in HTML / CSS / JS 😊
+    </p>
     
     <img loading="lazy" id="ordinateur" src="./images/alert.jpeg"/>
     <p id="alert">Please view this site from a computer or tablet with a larger screen or at an angle. <br>Thanks :)</p>
 
     <div id="box" style="transform: scale(.8);">
         <div id="joyLeft">
-
             <div id="keyTopJoyLeft"></div>
             <div id="keyTopJoyLeftBis"></div>
             <div id="buttonTop"></div>
@@ -57,24 +56,19 @@
             </div>
 
             <div id="buttonLeftBottom">
-                <span class="circle">
-                    
-                </span>
+                <span class="circle"></span>
             </div>
 
             <!-- reflects LEFT -->
             <div id="joyLeftReflectTop"></div>
             <div id="joyLeftReflectTopBis"></div>
-
             <div id="joyLeftReflectLeft"></div>
             <div id="joyLeftReflectBottom"></div>
             <div id="joyLeftReflectBottomBis"></div>
-
         </div>
 
         <div id="curvedScreenLeft"></div>
         <div id="frameLeft"></div>
-
         <div id="screenFrame">
             <div id="reflectTopScreen"></div>
             <div id="reflectBottomScreen"></div>
@@ -82,7 +76,6 @@
             <div id="lineBottomRight"></div>
             <div id="buttonVol1"></div>
             <div id="buttonVol2"></div>
-
             <div id="borderInterFrame">
                 <div id="reflect-screen"></div>
                 <div id="internFrame">
@@ -97,11 +90,8 @@
         <div id="joyRight">
             <div id="keyTopJoyRight"></div>
             <div id="keyTopJoyRightBis"></div>
-
             <div id="buttonPlus1"></div>
             <div id="buttonPlus2"></div>
-
-
             <div id="btnContainer2">
                 <div id="btnX">
                     <div id="reflectBtnX"></div>
@@ -176,14 +166,15 @@
     
             <div>
                 <label for="inputTag">
-                  <i class="fa fa-3x fa-camera" style="color:white; margin: 0px 20px;"></i>
+                    <i class="fa fa-3x fa-image" style="color:white; margin: 0px 20px;"></i>
                   <input id="inputTag" type="file"/>
                   <br/>
                   <span id="imageName"></span>
                 </label>
-              </div>
+            </div>
 
-        </section>          
+        </section>  
+            
 
             <div onclick="colorRedBlue()" class="circleColor">
                 <div id="colorBlue"></div>
@@ -211,17 +202,30 @@
             <img class="logo" loading="lazy" onclick="simpson()" src="./images/simpsonLogo.png" width="150px" alt="">
         </div>
 
+
     <div id="socials">
         <a href="https://www.linkedin.com/in/fatehelboucherour/" target="_blank"><img loading="lazy" class="social" src="./images/linked-in.png" alt=""></a>
         <a href="https://twitter.com/creazerty" target="_blank"><img loading="lazy" class="social" src="./images/twitter.png" alt=""></a>
     </div>
 
+
     <p class="footer">
         Nintendo Switch is a registered trademark
     </p>
 
+    <div>
+        <img src="" alt="" id="result" width="1350px">
+    </div>
+
+
+
     <input id="file" type="file" accepts="image/*" /><br />
     <span id="preview"></span>
+
+
+    <div class="boxCapture">
+        <i class="fa fa-2x fa-camera" onclick="capture()" style="color:black; margin: ‡0px;"></i>
+    </div>
 
     <script src="./index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -234,8 +238,33 @@
             document.getElementById('joyLeft').style.backgroundPosition = "top left";
             document.getElementById('joyRight').style.backgroundImage=`url(${ $("#preview").attr("src") })`;
             document.getElementById('joyRight').style.backgroundPosition = "top right";
+            document.body.style.backgroundColor = "white";
+            document.body.style.transition = ".8s";
+            document.getElementById('title').style.color="black";
+            document.getElementById('presentation').style.color="black";
         })
     </script>
+
+<script src="./html2canvas.min.js"></script>
+<script>
+    function capture() {
+        document.body.style.backgroundColor = "white";
+        document.body.style.transition = ".8s";
+        document.getElementById('title').style.color="black";
+        document.getElementById('presentation').style.color="black";
+        html2canvas(document.getElementById("box"), {
+            letterRendering: 1,
+            allowTaint: true,
+            useCORS: true,
+        })
+            .then(function (canvas) {
+                document.getElementById("result").src = canvas.toDataURL("image/png", 0.5);
+            })
+            .catch((e) => {
+                alert(e);
+            });
+    }
+</script>
 
 </body>
 </html>
