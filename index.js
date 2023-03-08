@@ -1,3 +1,38 @@
+function myColorLeft () {
+    let recupLeft = document.getElementById('myColorLeft').value
+    document.getElementById('joyLeft').style.backgroundImage = "";
+    document.getElementById('joyLeft').style.backgroundColor=recupLeft;
+}
+function myColorRight () {
+    let recupRight = document.getElementById('myColorRight').value
+    document.getElementById('joyRight').style.backgroundImage = "";
+    document.getElementById('joyRight').style.backgroundColor=recupRight;
+}
+
+
+function getPathPhoto(){
+    let getAvatar = document.getElementById('avatar').src
+
+    document.getElementById('joyLeft').style.backgroundImage=`url(${ $("#preview").attr('src') })`;
+
+}
+
+function myPhoto(){
+    let recupPhoto = document.getElementById('myPhoto').value
+    document.getElementById('image').style.backgroundImage=`url(${recupPhoto})`;
+    document.getElementById('joyLeft').style.backgroundImage=`url(${recupPhoto})`;
+    document.getElementById('joyLeft').style.backgroundPosition = "top left";
+    document.getElementById('joyRight').style.backgroundImage=`url(${recupPhoto})`;
+    document.getElementById('joyRight').style.backgroundPosition = "top right";
+    document.getElementById('joyLeft').style.backgroundSize="cover";
+    document.getElementById('joyRight').style.backgroundSize='cover';
+}
+
+
+
+
+
+
 function colorRedBlue(){
     document.getElementById('joyLeft').style.backgroundImage = "";
     document.getElementById('joyRight').style.backgroundImage = "";
@@ -45,7 +80,7 @@ function onePiece(){
     document.getElementById('joyLeft').style.backgroundImage="url('./images/onepiece.jpeg')";
     document.getElementById('joyLeft').style.backgroundPosition = "top left";
     document.getElementById('joyRight').style.backgroundImage="url('./images/onepiece.jpeg')";
-    document.getElementById('joyRight').style.backgroundPosition = "center";
+    document.getElementById('joyRight').style.backgroundPosition = "top right";
     document.body.style.backgroundColor = "#0097e6";
     document.body.style.transition = ".8s";
     document.getElementById('curvedScreenLeft').style.backgroundColor = "#0097e6";
@@ -88,7 +123,7 @@ function walkingDead(){
     document.getElementById('joyLeft').style.backgroundImage="url('./images/walkingdead.png')";
     document.getElementById('joyLeft').style.backgroundPosition = "top left";
     document.getElementById('joyRight').style.backgroundImage="url('./images/walkingdead.png')";
-    document.getElementById('joyRight').style.backgroundPosition = "top left";
+    document.getElementById('joyRight').style.backgroundPosition = "top right";
     document.getElementById('title').style.color="white";
     document.getElementById('presentation').style.color="white";
 }
