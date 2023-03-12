@@ -856,6 +856,10 @@ p {
         display: none !important;
     }
 
+    .boxCapture {
+        display: none;
+    }
+
     #alert {
         font-size: 2em; width: 80%;
         display: flex; text-align: center; justify-content: center;
