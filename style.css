@@ -834,6 +834,21 @@ p {
 }
 
 
+.boxCapture {
+    position: absolute;
+    top: 0px; right: 0px;
+    width: 100px; height: 100px; background-color: #55b5ff;
+    display: flex; align-items: center; justify-content: center;
+    /* border-bottom-left-radius: 100%; */
+    transition: .4s;
+}
+
+.boxCapture:hover {
+    transition: .2s ease-out;
+    width: 120px; height: 120px;
+}
+
+
  @media screen and (max-width: 1024px) {
 
     body {
@@ -912,18 +927,4 @@ input[type=url] {
     width: auto;
     height: 100%;
     padding: 0px 5px;
-}
-
-.boxCapture {
-    position: absolute;
-    top: 0px; right: 0px;
-    width: 100px; height: 100px; background-color: #55b5ff;
-    display: flex; align-items: center; justify-content: center;
-    /* border-bottom-left-radius: 100%; */
-    transition: .4s;
-}
-
-.boxCapture:hover {
-    transition: .2s ease-out;
-    width: 120px; height: 120px;
 }
