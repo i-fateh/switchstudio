@@ -12,9 +12,7 @@ function myColorRight () {
 
 function getPathPhoto(){
     let getAvatar = document.getElementById('avatar').src
-
     document.getElementById('joyLeft').style.backgroundImage=`url(${ $("#preview").attr('src') })`;
-
 }
 
 function myPhoto(){
@@ -185,7 +183,7 @@ function diablo(){
 function mario(){
     document.getElementById('joyLeft').style.backgroundColor="black";
     document.getElementById('joyRight').style.backgroundColor="black";
-    document.body.style.backgroundColor = "red";
+    document.body.style.backgroundColor = "#d63031";
     document.body.style.transition = ".8s";
     document.getElementById('curvedScreenLeft').style.backgroundColor = "red";
     document.getElementById('curvedScreenLeft').style.transition = ".8s";
